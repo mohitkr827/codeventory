@@ -80,6 +80,7 @@ code_snippet_manager/
 ├── Rakefile                        # Rake tasks for database management
 └── README.md                       # Project documentation
 ```
+## Download Links
 ## Future Improvements
 **User Authentication:** Add user accounts to store snippets privately.</br>
 **Export/Import:** Implement functionality to export/import snippets as JSON or Markdown files.</br>
