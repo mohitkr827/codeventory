@@ -2,10 +2,10 @@
 A simple command-line Ruby application to store, manage, and search code snippets. This project uses ActiveRecord for database management with an SQLite database. You can add, list, search, and delete snippets, making it a handy tool for developers to store reusable code.
 
 ## Features
-**Add snippets:** Store snippets with titles, code, and tags.
-**Search snippets:** Search snippets by title or tags.
-**List snippets:** Display all stored snippets.
-**Delete snippets:** Remove snippets by their ID.
+**Add snippets:** Store snippets with titles, code, and tags.</br>
+**Search snippets:** Search snippets by title or tags.</br>
+**List snippets:** Display all stored snippets.</br>
+**Delete snippets:** Remove snippets by their ID.</br>
 
 ## Installation
 Clone the repository:
@@ -28,10 +28,10 @@ ruby main.rb
 ## Usage
 After running the app, you'll be prompted with a menu of options:
 
-**Add a Snippet:** Add a new code snippet by entering a title, code, and optional tags.
-**Search Snippets:** Search for snippets by title or tags.
-**List All Snippets:** View all stored snippets.
-**Delete a Snippet:** Delete a snippet by its ID.
+**Add a Snippet:** Add a new code snippet by entering a title, code, and optional tags.</br>
+**Search Snippets:** Search for snippets by title or tags.</br>
+**List All Snippets:** View all stored snippets.</br>
+**Delete a Snippet:** Delete a snippet by its ID.</br>
 **Exit:** Exit the application.
 
 ## Example Workflow
@@ -81,6 +81,6 @@ code_snippet_manager/
 └── README.md                       # Project documentation
 ```
 ## Future Improvements
-**User Authentication:** Add user accounts to store snippets privately.
-**Export/Import:** Implement functionality to export/import snippets as JSON or Markdown files.
-Web Interface: Transition to a web-based version using Sinatra or Rails.
+**User Authentication:** Add user accounts to store snippets privately.</br>
+**Export/Import:** Implement functionality to export/import snippets as JSON or Markdown files.</br>
+**Web Interface:** Transition to a web-based version using Sinatra or Rails.</br>
