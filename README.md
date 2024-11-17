@@ -1,12 +1,13 @@
-Code Snippet Manager
+# Code Snippet Manager
 A simple command-line Ruby application to store, manage, and search code snippets. This project uses ActiveRecord for database management with an SQLite database. You can add, list, search, and delete snippets, making it a handy tool for developers to store reusable code.
 
-Features
-Add snippets: Store snippets with titles, code, and tags.
-Search snippets: Search snippets by title or tags.
-List snippets: Display all stored snippets.
-Delete snippets: Remove snippets by their ID.
-Installation
+## Features
+-**Add snippets:** Store snippets with titles, code, and tags.
+-**Search snippets:** Search snippets by title or tags.
+-**List snippets:** Display all stored snippets.
+-**Delete snippets:** Remove snippets by their ID.
+
+## Installation
 Clone the repository:
 
 bash
