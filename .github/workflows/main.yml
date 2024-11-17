@@ -1,0 +1,73 @@
+name: Build and Release Codeventory CLI Tool for Windows and Linux
+
+on:
+  push:
+    branches:
+      - master  # Trigger on the master branch
+
+jobs:
+  # Build for Linux
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'  # Replace with your Ruby version
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Install RubyPacker
+        run: gem install ruby-packer
+
+      - name: Get version number from branch
+        id: version
+        run: echo "VERSION=$(echo ${GITHUB_REF#refs/heads/} | sed 's/cli-\(.*\)/\1/').$(date +%s)" >> $GITHUB_ENV
+
+      - name: Package Ruby app for Linux
+        run: ruby-packer package main.rb --output "output/codeventory-linux-${VERSION}"
+
+      - name: Upload Linux executable as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: codeventory-linux-${VERSION}
+          path: output/codeventory-linux-${VERSION}
+
+  # Build for Windows
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'  # Replace with your Ruby version
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Install RubyPacker
+        run: gem install ruby-packer
+
+      - name: Get version number from branch
+        id: version
+        run: echo "VERSION=$(echo ${GITHUB_REF#refs/heads/} | sed 's/cli-\(.*\)/\1/').$(date +%s)" >> $GITHUB_ENV
+
+      - name: Package Ruby app for Windows
+        run: ruby-packer package main.rb --output "output/codeventory-windows-${VERSION}.exe"
+
+      - name: Upload Windows executable as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: codeventory-windows-${VERSION}
+          path: output/codeventory-windows-${VERSION}.exe
