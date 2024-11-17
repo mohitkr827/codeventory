@@ -9,46 +9,42 @@ A simple command-line Ruby application to store, manage, and search code snippet
 
 ## Installation
 Clone the repository:
-
-bash
-Copy code
+```
 git clone https://github.com/your-username/code_snippet_manager.git
 cd code_snippet_manager
+```
 Install dependencies: Make sure you have Ruby installed, then run:
-
-bash
-Copy code
+```
 bundle install
+```
 Run database migrations: Set up the database schema by running:
-
-bash
-Copy code
+```
 rake db:migrate
+```
 Run the application: Start the application with:
-
-bash
-Copy code
+```
 ruby main.rb
-Usage
+```
+## Usage
 After running the app, you'll be prompted with a menu of options:
 
-Add a Snippet: Add a new code snippet by entering a title, code, and optional tags.
-Search Snippets: Search for snippets by title or tags.
-List All Snippets: View all stored snippets.
-Delete a Snippet: Delete a snippet by its ID.
-Exit: Exit the application.
-Example Workflow
+-**Add a Snippet:** Add a new code snippet by entering a title, code, and optional tags.
+-**Search Snippets:** Search for snippets by title or tags.
+-**List All Snippets:** View all stored snippets.
+-**Delete a Snippet:** Delete a snippet by its ID.
+-**Exit:** Exit the application.
+
+## Example Workflow
 Add a Snippet:
-bash
-Copy code
+```
 Enter a title: Python for loops
 Enter the code snippet: 
 for i in range(10):
     print(i)
 Enter tags (comma-separated): python, loop
+```
 Search Snippets:
-bash
-Copy code
+```
 Enter a keyword or tag to search: python
 List All Snippets:
 bash
@@ -60,13 +56,13 @@ Code:
 for i in range(10):
     print(i)
 Created At: 2024-11-18 12:00:00
+```
 Delete a Snippet:
-bash
-Copy code
+```
 Enter the ID of the snippet to delete: 1
+```
 Files and Structure
-bash
-Copy code
+```
 code_snippet_manager/
 ├── app/
 │   ├── controllers/
@@ -83,7 +79,8 @@ code_snippet_manager/
 ├── Gemfile                         # Dependency manager for the project
 ├── Rakefile                        # Rake tasks for database management
 └── README.md                       # Project documentation
-Future Improvements
-User Authentication: Add user accounts to store snippets privately.
-Export/Import: Implement functionality to export/import snippets as JSON or Markdown files.
+```
+## Future Improvements
+-**User Authentication:** Add user accounts to store snippets privately.
+-**Export/Import:** Implement functionality to export/import snippets as JSON or Markdown files.
 Web Interface: Transition to a web-based version using Sinatra or Rails.
